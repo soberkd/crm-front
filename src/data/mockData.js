@@ -75,6 +75,198 @@ export const mockDataTeam = [
   },
 ];
 
+export const mockDataClients = [
+  {
+    id: 1,
+    clientName: "Eugene",
+    contactInformation: {
+      phoneNumber: "+1234567890",
+      emailAddress: "john.smith@example.com",
+      mailingAddress: "123 Main St, Nairobi",
+    },
+    numberOfPropertiesListed: 17,
+    numberOfPropertiesSold: 7,
+    totalSalesRevenue: "Ksh 55,000,000",
+    activeListings: 10,
+    propertiesUnderContract: 3,
+    clientType: "Realtor",
+  },
+  {
+    id: 2,
+    clientName: "Emily Johnson",
+    contactInformation: {
+      phoneNumber: "+9876543210",
+      emailAddress: "emily.johnson@example.com",
+      mailingAddress: "456 Elm St, Mombasa",
+    },
+    numberOfPropertiesListed: 4,
+    numberOfPropertiesSold: 2,
+    totalSalesRevenue: "Ksh 4,000,000",
+    activeListings: 2,
+    propertiesUnderContract: 0,
+    clientType: "Property Owner",
+  },
+  {
+    id: 3,
+    clientName: "David Kimani",
+    contactInformation: {
+      phoneNumber: "+254712345678",
+      emailAddress: "david.kimani@example.com",
+      mailingAddress: "789 Oak St, Kisumu",
+    },
+    numberOfPropertiesListed: 2,
+    numberOfPropertiesSold: 1,
+    totalSalesRevenue: "Ksh 2,500,000",
+    activeListings: 1,
+    propertiesUnderContract: 1,
+    clientType: "Property Seller",
+  },
+  {
+    id: 4,
+    clientName: "Grace Akinyi",
+    contactInformation: {
+      phoneNumber: "+254721234567",
+      emailAddress: "grace.akinyi@example.com",
+      mailingAddress: "101 Pine Rd, Nairobi",
+    },
+    numberOfPropertiesListed: 3,
+    numberOfPropertiesSold: 0,
+    totalSalesRevenue: "Ksh 0",
+    activeListings: 3,
+    propertiesUnderContract: 0,
+    clientType: "Property Owner",
+  },
+];
+
+export const mockDataBooking = [
+  {
+    id: 1,
+    propertyID: "P001",
+    buyerName: "John Smith",
+    eventType: "Down Payment",
+    eventDateTime: "2023-10-15 14:00",
+    eventLocation: "123 Main St, Nairobi",
+    bookingAmount: "$5,000",
+    paymentStatus: "Paid",
+  },
+  {
+    id: 2,
+    propertyID: "P002",
+    buyerName: "Emily Johnson",
+    eventType: "Open House",
+    eventDateTime: "2023-09-30 10:00",
+    eventLocation: "456 Elm St, Mombasa",
+    bookingAmount: "$0 (Free)",
+    paymentStatus: "Pending",
+  },
+  {
+    id: 3,
+    propertyID: "P003",
+    buyerName: "David Kimani",
+    eventType: "Property Tour",
+    eventDateTime: "2023-09-25 15:30",
+    eventLocation: "789 Oak St, Kisumu",
+    bookingAmount: "$0 (Free)",
+    paymentStatus: "Paid",
+  },
+  {
+    id: 4,
+    propertyID: "P004",
+    buyerName: "Grace Akinyi",
+    eventType: "Open House",
+    eventDateTime: "2023-10-05 11:00",
+    eventLocation: "101 Pine Rd, Nairobi",
+    bookingAmount: "$0 (Free)",
+    paymentStatus: "Partially Paid",
+  },
+  {
+    id: 5,
+    propertyID: "P005",
+    buyerName: "Peter Omondi",
+    eventType: "Down Payment",
+    eventDateTime: "2023-10-20 13:15",
+    eventLocation: "222 Cedar Ave, Mombasa",
+    bookingAmount: "$7,500",
+    paymentStatus: "Pending",
+  },
+];
+export const mockDataTasks = [
+  {
+    id: 1,
+    name: "Research Property Market",
+    description:
+      "Conduct market research to determine property value and demand.",
+    assigned: "John Smith",
+    priority: "High",
+    duedate: "2023-10-15",
+    status: "In Progress",
+    feedback: "",
+  },
+  {
+    id: 2,
+    name: "Property Listing",
+    description:
+      "Create an attractive property listing with high-quality photos and detailed information.",
+    assigned: "Emily Johnson",
+    priority: "Medium",
+    duedate: "2023-09-30",
+    status: "Completed",
+    feedback: "Listing looks great!",
+  },
+  {
+    id: 3,
+    name: "Legal Due Diligence",
+    description:
+      "Review property documents, titles, and permits for legal compliance.",
+    assigned: "David Kimani",
+    priority: "High",
+    duedate: "2023-09-25",
+    status: "Not Started",
+    feedback: "",
+  },
+  {
+    id: 4,
+    name: "Property Viewing",
+    description: "Schedule property viewings for potential buyers.",
+    assigned: "Grace Akinyi",
+    priority: "Medium",
+    duedate: "2023-10-05",
+    status: "Scheduled",
+    feedback: "",
+  },
+  {
+    id: 5,
+    name: "Negotiation with Buyer",
+    description:
+      "Engage in negotiations with a potential buyer to finalize the sale.",
+    assigned: "Peter Omondi",
+    priority: "High",
+    duedate: "2023-10-20",
+    status: "Pending",
+    feedback: "",
+  },
+  {
+    id: 6,
+    name: "Documentation and Contracts",
+    description: "Prepare legal documents and contracts for the property sale.",
+    assigned: "Lucy Njoroge",
+    priority: "High",
+    duedate: "2023-10-10",
+    status: "In Progress",
+    feedback: "",
+  },
+  {
+    id: 7,
+    name: "Property Handover",
+    description: "Coordinate the handover of the property to the new owner.",
+    assigned: "Samuel Wanjiku",
+    priority: "Medium",
+    duedate: "2023-11-05",
+    status: "Not Started",
+    feedback: "",
+  },
+];
+
 export const mockDataContacts = [
   {
     id: 1,
@@ -220,7 +412,6 @@ export const mockDataContacts = [
     registrarId: 92197,
   },
 ];
-
 
 export const mockDataInvoices = [
   {
@@ -639,8 +830,6 @@ export const mockLineData = [
     ],
   },
 ];
-
-
 
 export const mockGeographyData = [
   {

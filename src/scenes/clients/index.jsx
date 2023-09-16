@@ -1,76 +1,67 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataContacts } from "../../data/mockData";
+import { mockDataClients } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
-const Contacts = () => {
+const Clients = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID", flex: 0.5 },
     {
-      field: "name",
-      headerName: "Name",
+      field: "clientName",
+      headerName: "Client Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
-      field: "agent",
-      headerName: "Agent",
-      flex: 0.7,
-    },
-    {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
-      flex: 0.3,
-    },
-    {
-      field: "phone",
-      headerName: "Phone Number",
+      field: "clientType",
+      headerName: "Client Type",
       flex: 1,
     },
     {
-      field: "email",
-      headerName: "Email",
-      flex: 1,
-    },
-    {
-      field: "address",
-      headerName: "Address",
+      field: "contactInformation",
+      headerName: "Contact Information",
       flex: 0.5,
     },
     {
-      field: "landLocation",
-      headerName: "Land Location",
+      field: "numberOfPropertiesListed",
+      headerName: "Properties Listed",
+      flex: 0.5,
+    },
+    {
+      field: "numberOfPropertiesSold",
+      headerName: "Properties Sold",
+      flex: 0.5,
+    },
+    {
+      field: "totalSalesRevenue",
+      headerName: "Sales Revenue",
       flex: 1,
     },
     {
-      field: "status",
-      headerName: "Status",
-      flex: 1,
+      field: "activeListings",
+      headerName: "Active Listings",
+      flex: 0.5,
     },
     {
-      field: "landSize",
-      headerName: "Land Size",
-      flex: 1,
+      field: "propertiesUnderContract",
+      headerName: "Under Contract",
+      flex: 0.5,
     },
   ];
 
   return (
     <Box m="0 20px 10px 20px">
       <Header
-        title="CLIENTS CONTACTS"
+        title="CLIENTS"
         subtitle="List of Clients information"
       />
       <Box
-        m="20px 0 0 0"
+        m="10px 0 0 0"
         height="75vh"
         sx={{
           "& .MuiDataGrid-root": {
@@ -102,7 +93,7 @@ const Contacts = () => {
         }}
       >
         <DataGrid
-          rows={mockDataContacts}
+          rows={mockDataClients}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
         />
@@ -111,4 +102,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Clients;

@@ -14,6 +14,11 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 import SideBar from "./scenes/global/Sidebar";
+import Bookings from "./scenes/bookings";
+import Clients from "./scenes/clients";
+import Documents from "./scenes/client-documents";
+import Tasks from "./scenes/tasks";
+import BookingDetail from "./scenes/bookings/BookingDetail";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -32,12 +37,17 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
+              <Route path="/bookings" element={<Bookings />} />
+              <Route path="/tasks" element={<Tasks />} />
+              <Route path="/clients" element={<Clients />} />
+              <Route path="/documents" element={<Documents />} />
               <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
+              <Route path="/bookings/:id" element={<BookingDetail />} />
             </Routes>
           </main>
         </div>

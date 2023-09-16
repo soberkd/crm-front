@@ -52,7 +52,7 @@ const Calendar = () => {
   .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
 
   return (
-    <Box m="20px">
+    <Box m="0 20px 10px 20px">
       <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">

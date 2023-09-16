@@ -16,6 +16,11 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import TaskIcon from '@mui/icons-material/Task';
+import BookOnlineIcon from '@mui/icons-material/BookOnline';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import SourceIcon from '@mui/icons-material/Source';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -147,9 +152,37 @@ const SideBar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
+              title="Transactions"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Tasks"
+              to="/tasks"
+              icon={<TaskIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Bookings"
+              to="/bookings"
+              icon={<BookOnlineIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Clients"
+              to="/clients"
+              icon={<PeopleAltIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Clients Documents"
+              to="/documents"
+              icon={<SourceIcon />}
               selected={selected}
               setSelected={setSelected}
             />
