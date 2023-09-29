@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
+import { mockDataBooking } from "../../data/mockData";
 
 const Calendar = () => {
   const theme = useTheme();
@@ -46,10 +47,18 @@ const Calendar = () => {
     }
   };
 
-  const date = new Date(); // Replace with your date value
-  const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1)
-  .toString()
-  .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
+
+  const formattedEvents = mockDataBooking.map((data) => ({
+    id: data.id,
+    title: data.eventType, // You can use any property as the title
+    start: new Date(data.eventDateTime),
+    end: new Date(data.eventDateTime),
+    allDay: false, // Adjust this based on your data
+  }));
+  // const date = new Date(); // Replace with your date value
+  // const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1)
+  // .toString()
+  // .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
 
   return (
     <Box m="0 20px 10px 20px">
@@ -112,18 +121,19 @@ const Calendar = () => {
             select={handleDateClick}
             eventClick={handleEventClick}
             eventsSet={(events) => setCurrentEvents(events)}
-            initialEvents={[
-              {
-                id: "12315",
-                title: "All-day event",
-                date: "2022-09-14",
-              },
-              {
-                id: "5123",
-                title: "Timed event",
-                date: "2022-09-28",
-              },
-            ]}
+            initialEvents={formattedEvents}
+            // initialEvents={[
+            //   {
+            //     id: "12315",
+            //     title: "All-day event",
+            //     date: "2023-09-30",
+            //   },
+            //   {
+            //     id: "5123",
+            //     title: "Timed event",
+            //     date: "2023-09-28",
+            //   },
+            // ]}
           />
         </Box>
       </Box>

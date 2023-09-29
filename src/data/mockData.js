@@ -2,77 +2,86 @@ import { tokens } from "../theme";
 
 export const mockDataTeam = [
   {
-    id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    age: 35,
-    phone: "(665)121-5454",
-    access: "admin",
+    "id": 1,
+    "name": "Gilly Kim",
+    "email": "Gillykim100@gmail.com",
+    "age": 26,
+    "phone": "+254700236628",
+    "access": "administrator",
+    "property_managed": ["Villa Serenity", "Lakeview Apartments"]
   },
   {
-    id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    age: 42,
-    phone: "(421)314-2288",
-    access: "manager",
+    "id": 2,
+    "name": "Wanjiku Mwangi",
+    "email": "wanjikumwangi@gmail.com",
+    "age": 42,
+    "phone": "+254733333333",
+    "access": "manager",
+    "property_managed": ["Green Gardens Estate", "Palm Grove Apartments"]
   },
   {
-    id: 3,
-    name: "Jaime Lannister",
-    email: "jaimelannister@gmail.com",
-    age: 45,
-    phone: "(422)982-6739",
-    access: "user",
+    "id": 3,
+    "name": "James Kimani",
+    "email": "jameskimani@gmail.com",
+    "age": 45,
+    "phone": "+254711111111",
+    "access": "agent",
+    "property_managed": ["Riverside Villas", "Sunset Residences"]
   },
   {
-    id: 4,
-    name: "Anya Stark",
-    email: "anyastark@gmail.com",
-    age: 16,
-    phone: "(921)425-6742",
-    access: "admin",
+    "id": 4,
+    "name": "Amina Odhiambo",
+    "email": "aminaodhiambo@gmail.com",
+    "age": 28,
+    "phone": "+254799999999",
+    "access": "administrator",
+    "property_managed": ["Highland Towers", "Oceanfront Homes"]
   },
   {
-    id: 5,
-    name: "Daenerys Targaryen",
-    email: "daenerystargaryen@gmail.com",
-    age: 31,
-    phone: "(421)445-1189",
-    access: "user",
+    "id": 5,
+    "name": "David Mutua",
+    "email": "davidmutua@gmail.com",
+    "age": 31,
+    "phone": "+254788888888",
+    "access": "agent",
+    "property_managed": ["Mara Gardens", "Skyview Apartments"]
   },
   {
-    id: 6,
-    name: "Ever Melisandre",
-    email: "evermelisandre@gmail.com",
-    age: 150,
-    phone: "(232)545-6483",
-    access: "manager",
+    "id": 6,
+    "name": "Esther Muthoni",
+    "email": "esthermuthoni@gmail.com",
+    "age": 38,
+    "phone": "+254766666666",
+    "access": "manager",
+    "property_managed": ["Safari Homes", "Valley View Villas"]
   },
   {
-    id: 7,
-    name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
-    age: 44,
-    phone: "(543)124-0123",
-    access: "user",
+    "id": 7,
+    "name": "Francis Njoroge",
+    "email": "francisnjoroge@gmail.com",
+    "age": 44,
+    "phone": "+254755555555",
+    "access": "agent",
+    "property_managed": ["Hillside Residences", "Golden Gate Apartments"]
   },
   {
-    id: 8,
-    name: "Rossini Frances",
-    email: "rossinifrances@gmail.com",
-    age: 36,
-    phone: "(222)444-5555",
-    access: "user",
+    "id": 8,
+    "name": "Grace Wangari",
+    "email": "gracewangari@gmail.com",
+    "age": 36,
+    "phone": "+254722222222",
+    "access": "agent",
+    "property_managed": ["Maple Gardens", "Prestige Towers"]
   },
   {
-    id: 9,
-    name: "Harvey Roxie",
-    email: "harveyroxie@gmail.com",
-    age: 65,
-    phone: "(444)555-6239",
-    access: "admin",
-  },
+    "id": 9,
+    "name": "Harrison Otieno",
+    "email": "harrisonotieno@gmail.com",
+    "age": 50,
+    "phone": "+254733333333",
+    "access": "administrator",
+    "property_managed": ["Lakeside Residences", "Golden Sands Condos"]
+  }
 ];
 
 export const mockDataClients = [
@@ -412,7 +421,125 @@ export const mockDataContacts = [
     registrarId: 92197,
   },
 ];
+export const mockDataPropertyLand = [
+  {
+    "id": "LND001",
+    "propertyId": "NAK001",
+    "name": "Nakuru Valley Farmland",
+    "location": "Nakuru",
+    "type": "Agricultural",
+    "size": "10 acres",
+    "price": "1200000",
+    "status": "Available"
+  },
+  {
+    "id": "LND002",
+    "propertyId": "KIS002",
+    "name": "Kisii Tea Plantation",
+    "location": "Kisii",
+    "type": "Agricultural",
+    "size": "30 acres",
+    "price": "3500000",
+    "status": "Under Negotiation"
+  },
+  {
+    "id": "LND003",
+    "propertyId": "MER003",
+    "name": "Meru Residential Plot",
+    "location": "Meru",
+    "type": "Residential",
+    "size": "0.5 acres",
+    "price": "800000",
+    "status": "Available"
+  },
+  {
+    "id": "LND004",
+    "propertyId": "MBS004",
+    "name": "Mombasa Coastal Land",
+    "location": "Mombasa",
+    "type": "Commercial",
+    "size": "5 acres",
+    "price": "5500000",
+    "status": "Available"
+  },
+  {
+    "id": "LND005",
+    "propertyId": "ELD005",
+    "name": "Eldoret Industrial Zone",
+    "location": "Eldoret",
+    "type": "Industrial",
+    "size": "15 acres",
+    "price": "2800000",
+    "status": "Under Development"
+  },
+  {
+    "id": "LND006",
+    "propertyId": "THK006",
+    "name": "Thika Prime Land",
+    "location": "Thika",
+    "type": "Commercial",
+    "size": "2 acres",
+    "price": "2400000",
+    "status": "Available"
+  },
+  {
+    "id": "LND007",
+    "propertyId": "LAI007",
+    "name": "Laikipia Ranch",
+    "location": "Laikipia",
+    "type": "Rural",
+    "size": "50 acres",
+    "price": "6500000",
+    "status": "Available"
+  }
+];
 
+export const mockDataProperty = [
+  {
+    "id": "PROP001",
+    "propertyId": "NGP001",
+    "name": "Green Gardens Estate",
+    "location": "Nairobi",
+    "type": "Apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "price": "2500000",
+    "status": "Available"
+  },
+  {
+    "id": "PROP002",
+    "propertyId": "KAR002",
+    "name": "Kisumu Residences",
+    "location": "Kisumu",
+    "type": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "price": "4500000",
+    "status": "Under Contract"
+  },
+  {
+    "id": "PROP003",
+    "propertyId": "MBS003",
+    "name": "Mombasa Beachfront Villa",
+    "location": "Mombasa",
+    "type": "Villa",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "price": "7500000",
+    "status": "Available"
+  },
+  {
+    "id": "PROP004",
+    "propertyId": "NAX004",
+    "name": "Nakuru Heights Apartments",
+    "location": "Nakuru",
+    "type": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 2,
+      "price": "3200000",
+      "status": "Available",
+    },
+  ];
 export const mockDataInvoices = [
   {
     id: 1,
@@ -482,54 +609,49 @@ export const mockDataInvoices = [
 
 export const mockTransactions = [
   {
-    txId: "01e4dsa",
-    user: "johndoe",
-    date: "2021-09-01",
-    cost: "43.95",
+    "txId": "KES123ABC",
+    "user": "janekamau",
+    "date": "2023-09-29",
+    "cost": "450000"
   },
   {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
+    "txId": "MPESAXYZ1",
+    "user": "wangarikariuki",
+    "date": "2023-09-28",
+    "cost": "120050"
   },
   {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
+    "txId": "KES456DEF",
+    "user": "muthoniesther",
+    "date": "2023-09-27",
+    "cost": "780000"
   },
   {
-    txId: "51034szv",
-    user: "goodmanave",
-    date: "2022-11-05",
-    cost: "200.95",
+    "txId": "MPESABCD2",
+    "user": "otienoharrison",
+    "date": "2023-09-26",
+    "cost": "32000"
   },
   {
-    txId: "0a123sb",
-    user: "stevebower",
-    date: "2022-11-02",
-    cost: "13.55",
+    "txId": "KES789GHI",
+    "user": "kimanirobert",
+    "date": "2023-09-25",
+    "cost": "150000"
   },
   {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
+    "txId": "MPESAEFG3",
+    "user": "njorogefrancis",
+    "date": "2023-09-24",
+    "cost": "8800"
   },
   {
-    txId: "120s51a",
-    user: "wootzifer",
-    date: "2019-04-15",
-    cost: "24.20",
-  },
-  {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
-  },
-];
+    "txId": "KES101112JKL",
+    "user": "akinyinancy",
+    "date": "2023-09-23",
+    "cost": "250000"
+  }
+]
+;
 
 export const mockBarData = [
   {

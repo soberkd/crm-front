@@ -1,13 +1,18 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import { useNavigate } from "react-router-dom";
+
 
 const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
+
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
@@ -65,10 +70,28 @@ const Contacts = () => {
 
   return (
     <Box m="0 20px 10px 20px">
-      <Header
-        title="CLIENTS CONTACTS"
-        subtitle="List of Clients information"
-      />
+      <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Header
+          title="LEADS"
+          subtitle="List of Leads information"
+        />
+        <Box>
+          <Button
+            sx={{
+              backgroundColor: colors.blueAccent[700],
+              color: colors.grey[100],
+              fontSize: "14px",
+              fontWeight: "bold",
+              padding: "10px 20px",
+            }}
+            onClick={() => navigate("/form")}
+          >
+            <AddBoxIcon sx={{ mr: "10px" }} />
+            Add Leads
+          </Button>
+        </Box>
+      </Box>
+
       <Box
         m="20px 0 0 0"
         height="75vh"

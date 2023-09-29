@@ -1,9 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataTasks } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+
 
 const Tasks = () => {
   const theme = useTheme();
@@ -47,10 +49,26 @@ const Tasks = () => {
 
   return (
     <Box m="0 20px 10px 20px">
-      <Header
+       <Box display="flex" justifyContent="space-between" alignItems="center">
+       <Header
         title="TASKS"
         subtitle="List of Tasks"
-      />
+      />        <Box>
+          <Button
+            sx={{
+              backgroundColor: colors.blueAccent[700],
+              color: colors.grey[100],
+              fontSize: "14px",
+              fontWeight: "bold",
+              padding: "10px 20px",
+            }}
+          >
+            <AddBoxIcon sx={{ mr: "10px" }} />
+            Add Tasks
+          </Button>
+        </Box>
+      </Box>
+      
       <Box
         m="10px 0 0 0"
         height="75vh"

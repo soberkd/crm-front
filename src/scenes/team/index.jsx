@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
@@ -6,6 +6,8 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+
 
 const Team = () => {
   const theme = useTheme();
@@ -70,7 +72,23 @@ const Team = () => {
 
   return (
     <Box m="0 20px 10px 20px">
+      <Box display="flex" justifyContent="space-between" alignItems="center">
       <Header title="TEAM" subtitle="Managing the Team Members" />
+        <Box>
+          <Button
+            sx={{
+              backgroundColor: colors.blueAccent[700],
+              color: colors.grey[100],
+              fontSize: "14px",
+              fontWeight: "bold",
+              padding: "10px 20px",
+            }}
+          >
+            <AddBoxIcon sx={{ mr: "10px" }} />
+            Add Team Member
+          </Button>
+        </Box>
+      </Box>
       <Box
         m="20px 0 0 0"
         height="75vh"

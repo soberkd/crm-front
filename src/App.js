@@ -16,9 +16,14 @@ import Calendar from "./scenes/calendar/calendar";
 import SideBar from "./scenes/global/Sidebar";
 import Bookings from "./scenes/bookings";
 import Clients from "./scenes/clients";
-import Documents from "./scenes/client-documents";
 import Tasks from "./scenes/tasks";
 import BookingDetail from "./scenes/bookings/BookingDetail";
+import Properties from "./scenes/property";
+import FormApartment from "./scenes/form/FormApartement";
+import FormLand from "./scenes/form/FormLand";
+import FormBooking from "./scenes/form/FormBooking";
+import FormClients from "./scenes/form/FormClient";
+import FormInvoice from "./scenes/form/FormInvoice";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -40,7 +45,7 @@ function App() {
               <Route path="/bookings" element={<Bookings />} />
               <Route path="/tasks" element={<Tasks />} />
               <Route path="/clients" element={<Clients />} />
-              <Route path="/documents" element={<Documents />} />
+              <Route path="/properties" element={<Properties />} />
               <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
@@ -48,6 +53,11 @@ function App() {
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/bookings/:id" element={<BookingDetail />} />
+              <Route path="/formapartment" element={<FormApartment />} />
+              <Route path="/landform" element={<FormLand />} />
+              <Route path="/bookingform" element={<FormBooking />} />
+              <Route path="/clientform" element={<FormClients />} />
+              <Route path="/invoiceform" element={<FormInvoice />} />
             </Routes>
           </main>
         </div>
