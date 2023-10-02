@@ -13,7 +13,7 @@ const Form = () => {
 
   return (
     <Box m="20px">
-      <Header title="ADD NEW CLIENT" subtitle="Add a New Client Info" />
+      <Header title="ADD NEW LEADS" subtitle="Add New Lead Info" />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -23,7 +23,7 @@ const Form = () => {
         {({
           values,
           errors,
-          touched,
+          // touched,
           handleBlur,
           handleChange,
           handleSubmit,
@@ -31,7 +31,7 @@ const Form = () => {
           <form onSubmit={handleSubmit}>
             <Box
               display="grid"
-              gap="30px"
+              gap="10px"
               gridTemplateColumns="repeat(4, minmax(0, 1fr))"
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
@@ -39,117 +39,117 @@ const Form = () => {
             >
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="First Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.firstName}
                 name="firstName"
-                error={!!touched.firstName && !!errors.firstName}
-                helperText={touched.firstName && errors.firstName}
-                sx={{ gridColumn: "span 2" }}
+                // error={!!touched.firstName && !!errors.firstName}
+                // helperText={touched.firstName && errors.firstName}
+                sx={{ gridColumn: "span 1.5" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Last Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.lastName}
                 name="lastName"
-                error={!!touched.lastName && !!errors.lastName}
-                helperText={touched.lastName && errors.lastName}
-                sx={{ gridColumn: "span 2" }}
+                // error={!!touched.lastName && !!errors.lastName}
+                // helperText={touched.lastName && errors.lastName}
+                sx={{ gridColumn: "span 1.5" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Email"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.email}
                 name="email"
-                error={!!touched.email && !!errors.email}
-                helperText={touched.email && errors.email}
+                // error={!!touched.email && !!errors.email}
+                // helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 3" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Contact Number"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.contact}
                 name="contact"
-                error={!!touched.contact && !!errors.contact}
-                helperText={touched.contact && errors.contact}
+                // error={!!touched.contact && !!errors.contact}
+                // helperText={touched.contact && errors.contact}
                 sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Address"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.address1}
                 name="address1"
-                error={!!touched.address1 && !!errors.address1}
-                helperText={touched.address1 && errors.address1}
-                sx={{ gridColumn: "span 3" }}
+                // error={!!touched.address1 && !!errors.address1}
+                // helperText={touched.address1 && errors.address1}
+                sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Land Location"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.landLocation}
                 name="landLocation"
-                error={!!touched.landLocation && !!errors.landLocation}
-                helperText={touched.landLocation && errors.landLocation}
-                sx={{ gridColumn: "span 3" }}
+                // error={!!touched.landLocation && !!errors.landLocation}
+                // helperText={touched.landLocation && errors.landLocation}
+                sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Agent"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.agent}
                 name="agent"
-                error={!!touched.agent && !!errors.agent}
-                helperText={touched.agent && errors.agent}
+                // error={!!touched.agent && !!errors.agent}
+                // helperText={touched.agent && errors.agent}
                 sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Land Size"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.landSize}
                 name="landSize"
-                error={!!touched.landSize && !!errors.landSize}
-                helperText={touched.landSize && errors.landSize}
+                // error={!!touched.landSize && !!errors.landSize}
+                // helperText={touched.landSize && errors.landSize}
                 sx={{ gridColumn: "span 1" }}
               />
              <Select
                 fullWidth
-                variant="filled"
+                variant="standard"
                 label="Status"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.status}
                 name="status"
-                error={!!touched.status && !!errors.status}
+                // error={!!touched.status && !!errors.status}
                 sx={{ gridColumn: "span 1" }}
               >
                 {/* Dropdown menu options */}
@@ -166,7 +166,7 @@ const Form = () => {
               </Select>
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
-              <Button type="submit" color="secondary" variant="contained">
+              <Button type="submit" color="secondary" variant="contained" sx={{ mb: 10,}}>
                 Add New Client
               </Button>
             </Box>

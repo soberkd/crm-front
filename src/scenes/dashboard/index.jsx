@@ -23,7 +23,7 @@ const Dashboard = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
-        <Box>
+        {/* <Box>
           <Button
             sx={{
               backgroundColor: colors.blueAccent[700],
@@ -36,7 +36,7 @@ const Dashboard = () => {
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
             Download Reports
           </Button>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* GRID & CHARTS */}
@@ -56,7 +56,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="34"
-            subtitle="Land Listed"
+            subtitle="Property Listed"
             progress="0.75"
             increase="+14%"
             icon={
@@ -75,7 +75,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="2"
-            subtitle="Land Sales"
+            subtitle="Property Sales"
             progress="0.50"
             increase="+21%"
             icon={
@@ -94,7 +94,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="13"
-            subtitle="New Clients"
+            subtitle="Leads"
             progress="0.30"
             increase="+5%"
             icon={
@@ -132,7 +132,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="3"
-            subtitle="Leads"
+            subtitle="Clients"
             progress="0.10"
             increase="+15%"
             icon={

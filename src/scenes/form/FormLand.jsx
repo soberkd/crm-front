@@ -33,7 +33,7 @@ const FormLand = () => {
           <form onSubmit={handleSubmit}>
             <Box
               display="grid"
-              gap="30px"
+              gap="10px"
               gridTemplateColumns="repeat(4, minmax(0, 1fr))"
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
@@ -42,7 +42,7 @@ const FormLand = () => {
               {/* Location Information */}
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Country"
                 onBlur={handleBlur}
@@ -55,7 +55,7 @@ const FormLand = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="County"
                 onBlur={handleBlur}
@@ -68,7 +68,7 @@ const FormLand = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Sub County"
                 onBlur={handleBlur}
@@ -81,7 +81,7 @@ const FormLand = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Ward"
                 onBlur={handleBlur}
@@ -94,7 +94,7 @@ const FormLand = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Specific Location"
                 onBlur={handleBlur}
@@ -113,7 +113,7 @@ const FormLand = () => {
               {/* Property Details */}
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Price"
                 onBlur={handleBlur}
@@ -126,7 +126,7 @@ const FormLand = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 multiline
                 rows={4}
                 label="Property Description"
@@ -142,7 +142,7 @@ const FormLand = () => {
               {/* Coordinates */}
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Enter Latitude"
                 onBlur={handleBlur}
@@ -155,7 +155,7 @@ const FormLand = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="outlined"
                 type="text"
                 label="Center Longitude"
                 onBlur={handleBlur}
@@ -176,7 +176,7 @@ const FormLand = () => {
                 <React.Fragment key={point}>
                   <TextField
                     fullWidth
-                    variant="filled"
+                    variant="outlined"
                     type="text"
                     label={`Point ${point} Latitude`}
                     onBlur={handleBlur}
@@ -187,7 +187,7 @@ const FormLand = () => {
                   />
                   <TextField
                     fullWidth
-                    variant="filled"
+                    variant="outlined"
                     type="text"
                     label={`Point ${point} Longitude`}
                     onBlur={handleBlur}
@@ -204,7 +204,7 @@ const FormLand = () => {
                 <TextField
                   key={index}
                   fullWidth
-                  variant="filled"
+                  variant="outlined"
                   type="text"
                   label={`Image ${index + 1}`}
                   onBlur={handleBlur}

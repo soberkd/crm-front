@@ -74,7 +74,7 @@ const Team = () => {
     <Box m="0 20px 10px 20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
       <Header title="TEAM" subtitle="Managing the Team Members" />
-        <Box>
+        {/* <Box>
           <Button
             sx={{
               backgroundColor: colors.blueAccent[700],
@@ -87,7 +87,7 @@ const Team = () => {
             <AddBoxIcon sx={{ mr: "10px" }} />
             Add Team Member
           </Button>
-        </Box>
+        </Box> */}
       </Box>
       <Box
         m="20px 0 0 0"

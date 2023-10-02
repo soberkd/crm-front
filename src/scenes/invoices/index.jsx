@@ -4,10 +4,13 @@ import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
 import Header from "../../components/Header";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import { useNavigate } from "react-router-dom";
 
 const Invoices = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
+
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -56,6 +59,7 @@ const Invoices = () => {
               fontWeight: "bold",
               padding: "10px 20px",
             }}
+            onClick={() => navigate("/invoiceform")}
           >
             <AddBoxIcon sx={{ mr: "10px" }} />
             Add Invoice

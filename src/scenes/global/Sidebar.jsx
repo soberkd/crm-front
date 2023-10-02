@@ -99,22 +99,22 @@ const SideBar = () => {
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
-                  width="100px"
-                  height="100px"
+                  width="50px"
+                  height="50px"
                   src={`../../assets/user.jpg`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
               <Box textAlign="center">
                 <Typography
-                  variant="h2"
+                  variant="h4"
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
                   Gilly Kim
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
+                <Typography variant="h6" color={colors.greenAccent[500]}>
                   Lands Admin
                 </Typography>
               </Box>
@@ -186,13 +186,6 @@ const SideBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
-              title="apartmen"
-              to="/formapartment"
-              icon={<SourceIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
 
             <Typography
               variant="h6"
@@ -201,16 +194,23 @@ const SideBar = () => {
             >
               Pages
             </Typography>
-            <Item
+            {/* <Item
               title="Leads Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+            /> */}
+            {/* <Item
+              title="Login"
+              to="/login"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
             />
             <Item
-              title="Lands Form"
-              to="/landform"
+              title="Sign Up"
+              to="/register"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -221,21 +221,21 @@ const SideBar = () => {
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-            <Item
+            /> */}
+            {/* <Item
               title="Client Form"
               to="/clientform"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-            <Item
+            /> */}
+            {/* <Item
               title="Invoice Form"
               to="/invoiceform"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
             <Item
               title="Calendar"
               to="/calendar"

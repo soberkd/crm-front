@@ -40,7 +40,7 @@ const FormInvoice = () => {
             >
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Name"
                 onBlur={handleBlur}
@@ -53,7 +53,7 @@ const FormInvoice = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="email"
                 label="Email"
                 onBlur={handleBlur}
@@ -66,7 +66,7 @@ const FormInvoice = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Cost"
                 onBlur={handleBlur}
@@ -79,7 +79,7 @@ const FormInvoice = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Phone"
                 onBlur={handleBlur}
@@ -92,7 +92,7 @@ const FormInvoice = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Date"
                 onBlur={handleBlur}
@@ -105,7 +105,7 @@ const FormInvoice = () => {
               />
               <TextField
                 fullWidth
-                variant="filled"
+                variant="standard"
                 type="text"
                 label="Transaction ID"
                 onBlur={handleBlur}
@@ -146,5 +146,4 @@ const initialValues = {
   date: "",
   transactionId: "",
 };
-
 export default FormInvoice;

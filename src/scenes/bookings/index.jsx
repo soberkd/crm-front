@@ -14,7 +14,7 @@ const Bookings = () => {
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
 
-  const handleRowClick = (params, event) => {
+  const handleRowClick = (params, bookingData) => {
     const bookingId = params.row.id;
     navigate(`/bookings/${bookingId}`);
   };
@@ -29,19 +29,24 @@ const Bookings = () => {
       cellClassName: "name-column--cell",
     },
     {
-      field: "eventType",
-      headerName: "Event Type",
-      flex: 1,
+      field: "agent",
+      headerName: "Agent",
+      flex: 0.7,
     },
     {
       field: "eventDateTime",
-      headerName: "Event Date/Time",
+      headerName: "Due Date/Time",
       flex: 1,
     },
     {
       field: "bookingAmount",
       headerName: "Booking Amount",
       flex: 1,
+    },
+    {
+      field: "paymentmode",
+      headerName: "Payment Mode",
+      flex: 0.5,
     },
     {
       field: "paymentStatus",
@@ -63,9 +68,11 @@ const Bookings = () => {
               fontWeight: "bold",
               padding: "10px 20px",
             }}
+            onClick={() => navigate("/bookingform")}
+
           >
             <AddBoxIcon sx={{ mr: "10px" }} />
-            Add Client
+            Add Booking
           </Button>
         </Box>
       </Box>

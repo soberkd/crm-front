@@ -24,6 +24,10 @@ import FormLand from "./scenes/form/FormLand";
 import FormBooking from "./scenes/form/FormBooking";
 import FormClients from "./scenes/form/FormClient";
 import FormInvoice from "./scenes/form/FormInvoice";
+import { mockDataBooking } from "./data/mockData";
+import { Login } from "@mui/icons-material";
+import SignUpPage from "./scenes/auth/SignUp";
+import LoginPage from "./scenes/auth/Login";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -52,12 +56,15 @@ function App() {
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
-              <Route path="/bookings/:id" element={<BookingDetail />} />
+              <Route path="/bookings/:bookingId" element={<BookingDetail booking={mockDataBooking} />} />
+              {/* <Route path="/bookings/:id" element={<BookingDetail />} /> */}
               <Route path="/formapartment" element={<FormApartment />} />
               <Route path="/landform" element={<FormLand />} />
               <Route path="/bookingform" element={<FormBooking />} />
               <Route path="/clientform" element={<FormClients />} />
               <Route path="/invoiceform" element={<FormInvoice />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<SignUpPage />} />
             </Routes>
           </main>
         </div>

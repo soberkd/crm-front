@@ -32,7 +32,7 @@ const FormApartment = () => {
           <form onSubmit={handleSubmit}>
             <Box
               display="grid"
-              gap="30px"
+              gap="10px"
               gridTemplateColumns="repeat(4, minmax(0, 1fr))"
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
@@ -78,23 +78,31 @@ const FormApartment = () => {
                 helperText={touched.cash_price && errors.cash_price}
                 sx={{ gridColumn: "span 3" }}
               />
-
-              {/* Amenities Checkboxes */}
-              {Array.from({ length: 15 }, (_, index) => index + 1).map(
-                (amenityIndex) => (
-                  <Box key={amenityIndex}>
-                    <label>
-                      <input
-                        type="checkbox"
-                        name={`amenities${amenityIndex}`}
-                        checked={values[`amenities${amenityIndex}`]}
-                        onChange={handleChange}
-                      />
-                      {`Amenity ${amenityIndex}`}
-                    </label>
-                  </Box>
-                )
-              )}
+              {[
+                "Kid's Play Area",
+                "Swimming pool",
+                "Backup generator",
+                "CCTV",
+                "Balcony",
+                "Water Purifier",
+                "Intercom",
+                "Solar Lighting",
+                "Supermarket",
+                "Gym",
+                "Club House",
+              ].map((amenity, index) => (
+                <Box key={index}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name={`amenities${index + 1}`}
+                      checked={values[`amenities${index + 1}`]}
+                      onChange={handleChange}
+                    />
+                    {amenity}
+                  </label>
+                </Box>
+              ))}
 
               {/* Property Description */}
               <TextField

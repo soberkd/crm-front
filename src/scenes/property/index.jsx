@@ -6,11 +6,14 @@ import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import { useNavigate } from "react-router-dom";
 
 
 const Properties = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
+
   const [dataPropertyApartment, setDataPropertyApartment] = useState([]); // Initialize apartments as an empty array
 
   useEffect(() => {
@@ -128,6 +131,10 @@ const Properties = () => {
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
+            }}
+            onClick={() => {
+              setListingType(listingType === "land" ? "apartments" : "land");
+              navigate(listingType === "land" ? "/landform" : "/formapartment");
             }}
           >
             <AddBoxIcon />

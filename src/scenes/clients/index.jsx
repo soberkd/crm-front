@@ -5,11 +5,14 @@ import { mockDataClients } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import { useNavigate } from "react-router-dom";
 
 
 const Clients = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
+
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
@@ -60,7 +63,7 @@ const Clients = () => {
     <Box m="0 20px 10px 20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="CLIENTS" subtitle="List of Clients information" />
-        <Box>
+        {/* <Box>
           <Button
             sx={{
               backgroundColor: colors.blueAccent[700],
@@ -69,10 +72,11 @@ const Clients = () => {
               fontWeight: "bold",
               padding: "10px 20px",
             }}
+            onClick={() => navigate("/clientform")}
           >
             <AddBoxIcon />
           </Button>
-        </Box>
+        </Box> */}
       </Box>
 
       <Box
