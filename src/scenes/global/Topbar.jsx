@@ -6,12 +6,12 @@ import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+// import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 
-const Topbar = () => {
+const Topbar = ({onLogout}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
@@ -23,6 +23,10 @@ const Topbar = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleLogoutClick = () => {
+    handleClose();
+    onLogout();
   };
 
   return (
@@ -58,13 +62,15 @@ const Topbar = () => {
           <PersonOutlinedIcon />
         </IconButton>
         <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          {onLogout && ( // Conditionally render Logout MenuItem
+            <MenuItem onClick={handleLogoutClick}>Logout</MenuItem>
+          )}
+        </Menu>
       </Box>
     </Box>
   );
